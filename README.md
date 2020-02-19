@@ -1,2 +1,1 @@
-# Gadget-Board
-##This is hungout for gadget nerds.
+Life is Tech ! の教材で利用する `Sinatra` テンプレートです。

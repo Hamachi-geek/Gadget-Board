@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ガジェ板 by Hamachi</title>
-  <meta name="これがワイ(Hamachi)のホームページや!!">
-  <link rel="stylesheet" href="index.css">
+  <title>ガジェ板</title>
+  <meta name="これがワイ(Hamachi)のガジェ板や!!">
+  <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 <body class="index">
 
-<!--title-->
-  <h1 class="title">ガジェ板</h1>
-  <h2 class="message_one">リンゴガーとかドロガーとか言うなら帰って</h2>
+<h1>ガジェ板</h1>
 
-<!--form-->
-  <form action="list"method="get" class="form-inline"/>
-   
-    <input type="text" name="name" id="x" placeholder="お名前" class="input_name"/>
-    <input type="text" name="scentence" id="y" placeholder="内容(あんま長文かかんといて...)" class="input_scentence"/>
-    <input type="submit" value="カキコれ！！れ！！" class="submit"/>
+<h1>卍ガジェ板卍</h1>
 
-    </form>       
-  
-  </body>
+<form action="/comment" method="get" >
+  <input type="text" name="comment"/>
+  <button type="submit">カキコ<button>
+</form>  
 
+    <% @articles.each do |article| %>
+      
+        <h1><%= article.comment %></h1>
+      
+      <% end %>    
+      
+</body>  
 </html>
