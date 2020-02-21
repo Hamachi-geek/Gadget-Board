@@ -9,13 +9,18 @@ require 'net/http'
 require 'sinatra/activerecord'
 require './models'
 
+
+before do
+end
+
+
 get '/' do
-    @articles = Article.all.order ('id desc')
+    @hamanos = Article.all
     erb :index
 end
 
 
-get '/comment' do
-    Article.create(comment: params[:comment])
-    erb :index
+post '/comment' do
+    Article.create({comment: params[:comment]})
+   redirect '/'
 end

@@ -6,24 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ガジェ板</title>
   <meta name="これがワイ(Hamachi)のガジェ板や!!">
-  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="index">
+<body>
 
 <h1>ガジェ板</h1>
 
 <h1>卍ガジェ板卍</h1>
 
-<form action="/comment" method="get" >
+<form action="/comment" method="post" >
   <input type="text" name="comment"/>
-  <button type="submit">カキコ<button>
+  <button type="submit">カキコ</button>
 </form>  
 
-    <% @articles.each do |article| %>
-      
-        <h1><%= article.comment %></h1>
-      
-      <% end %>    
-      
+<% @hamanos.each do |hamano| %>
+
+  <h1> <%=hamano.comment %> </h1>
+
+<% end %>
+
 </body>  
 </html>
