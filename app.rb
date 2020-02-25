@@ -15,12 +15,11 @@ end
 
 
 get '/' do
-    @hamanos = Article.all
+    @articles = Article.all
     erb :index
 end
 
-
 post '/comment' do
-    Article.create({comment: params[:comment]})
-   redirect '/'
+    Article.create!({comment: params[:comment]})
+    redirect '/'
 end
