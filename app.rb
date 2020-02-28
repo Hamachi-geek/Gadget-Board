@@ -19,7 +19,11 @@ get '/' do
     erb :index
 end
 
+  
 post '/comment' do
-    Article.create!({comment: params[:comment]})
+    Article.create(
+        person: params[:person],
+        comment: params[:comment]
+    )
     redirect '/'
 end
