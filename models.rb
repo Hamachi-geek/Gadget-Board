@@ -6,4 +6,7 @@ if development?
 end
     
 class Article < ActiveRecord::Base
+
+    validates :comment, presence: true
+    validates :person, length: { maximum: 15 }
 end
